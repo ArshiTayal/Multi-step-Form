@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Multi-Step Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="step active"><span>1</span> <div><strong>STEP 1</strong><br>YOUR INFO</div></div>
+      <div class="step"><span>2</span> <div><strong>STEP 2</strong><br>SELECT PLAN</div></div>
+      <div class="step"><span>3</span> <div><strong>STEP 3</strong><br>ADD-ONS</div></div>
+      <div class="step"><span>4</span> <div><strong>STEP 4</strong><br>SUMMARY</div></div>
+      <div class="bottom-pattern"></div>
+      <div class="left-pattern"></div>
+      <div class="transparent"></div>
+    </div>
+
+    <div class="form-container">
+      <form id="multiStepForm">
+        <div class="form-step step-1 active">
+          <h2>Personal info</h2>
+          <p>Please provide your name, email, and phone.</p>
+          <label>Name
+            <input type="text" name="name" placeholder="e.g. Stephen King" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" placeholder="e.g. stephenking@lorem.com" required>
+          </label>
+          <label>Phone
+            <input type="tel" name="phone" placeholder="e.g. +1 234 567 890" required>
+          </label>
+          <div class="btns">
+            <button type="button" class="next-btn">Next Step</button>
+          </div>
+        </div>
+        <div class="form-step step-2">
+          <h2>Select Plan</h2>
+          <p>Choose your subscription plan.</p>
+          <div class="card-options">
+            <label class="card">
+              <input type="radio" name="plan" value="Basic" required>
+              <div class="card-content">
+                <div class="badge">Best Value</div>
+                <h3>Basic</h3>
+                <p>$10/month</p>
+              </div>
+            </label>
+            <label class="card">
+              <input type="radio" name="plan" value="Premium">
+              <div class="card-content">
+                <div class="badge popular">Most Popular</div>
+                <h3>Premium</h3>
+                <p>$20/month</p>
+              </div>
+            </label>
+          </div>
+          <div class="btns">
+            <button type="button" class="back-btn">Go Back</button>
+            <button type="button" class="next-btn">Next Step</button>
+          </div>
+        </div>
+        <div class="form-step step-3">
+          <h2>Add-ons</h2>
+          <p>Choose additional services.</p>
+          <div class="card-options">
+            <label class="card">
+              <input type="checkbox" name="addons" value="Extra storage">
+              <div class="card-content">
+                <h3>Extra storage</h3>
+                <p>+50GB for $5</p>
+              </div>
+            </label>
+            <label class="card">
+              <input type="checkbox" name="addons" value="Priority support">
+              <div class="card-content">
+                <h3>Priority support</h3>
+                <p>24/7 assistance</p>
+              </div>
+            </label>
+          </div>
+          <div class="btns">
+            <button type="button" class="back-btn">Go Back</button>
+            <button type="button" class="next-btn">Next Step</button>
+          </div>
+        </div>
+        <div class="form-step step-4">
+          <h2>Summary</h2>
+          <p>Review your selections.</p>
+          <div id="summary"></div>
+          <div class="btns">
+            <button type="button" class="back-btn">Go Back</button>
+            <button type="submit" class="next-btn">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
